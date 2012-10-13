@@ -1,0 +1,1 @@
+<?= $html->link('Click here to confirm your email', '/auth/confirm_process/'.$activation_key); ?>

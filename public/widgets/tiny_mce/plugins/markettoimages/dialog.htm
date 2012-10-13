@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>{#markettoimages_dlg.title}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+	<script type="text/javascript" src="js/dialog.js"></script>
+	
+	<link href="css/dialog.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="upload_in_progress" class="upload_infobar"><img src="img/spinner.gif" width="16" height="16" /> {#markettoimages_dlg.upload_in_progress}</div>
+<div id="upload_infobar" class="upload_infobar"></div>
+<div id="upload_form_container">
+	<form id="upl" name="upl" action="/widgets/uploadimage" method="post" enctype="multipart/form-data" target="upload_target" onsubmit="MarkettoImagesDialog.inProgress();">
+	<p>{#markettoimages_dlg.select_an_image}:</p>
+	<p><input id="uploader" name="userfile" type="file" class="text"/> </p>
+	<p><select name="thumb">
+			<option value="original">Original Size</option>
+			<option value="width">Fixed Width</option>
+			<option value="height">Fixed Height</option>
+			<option value="square">Square</option>
+			<option value="filled">Filled Square</option>
+			<option value="best">Best Fit</option>
+			<option value="crop">Cropped</option>
+		</select>
+		{#markettoimages_dlg.width}: <input name="width" type="text" class="text size"/> 
+		{#markettoimages_dlg.height}: <input name="height" type="text" class="text size"/>
+	</p>
+	<p><input type="submit" value="{#markettoimages_dlg.upload}" /></p>
+</form></div>
+<iframe id="upload_target" name="upload_target" src="/widgets/blank"></iframe>
+</body>
+</html>

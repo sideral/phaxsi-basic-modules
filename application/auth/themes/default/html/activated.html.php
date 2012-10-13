@@ -1,0 +1,1 @@
+You account has been successfully activated. Please log in.

@@ -1,0 +1,1 @@
+<?= $html->link('Click here to reset your password', '/auth/confirm_process/'.$activation_key); ?>
